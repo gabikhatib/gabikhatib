@@ -8,7 +8,7 @@ box-sizing: border-box;
 body {
     background-image: url(../Imagens/Fundo.jpg);
     background-size: auto 100vh;
-    font-family: Palatino Linotype;
+    font-family: 'Roboto Slab', serif;
     height: 100vh;
     font-size: 12px; 
   }
@@ -76,12 +76,64 @@ header{
     color: purple;
     text-align: center;
   }
+
+  .site-title {
+    font-size: 4em;
+    font-family: 'Pacifico', cursive;
+  }
   
   .site-subtitle {
     font-style: italic; 
+    font-family: 'Patrick Hand', cursive;
+    line-height: 1,8em;
   }
 
+.portfolio h2 {
+  font-family: 'Patrick Hand', cursive;
+  color: rgb(60, 66, 156);
+  margin-bottom: 2em;
+  font-size: 3em;
+}
+
+.portfolio {
+  padding: 2em;
+  height: 100vh;
+}
+
+.portfolio .grid {
+  display: grid;
+  gap: 2em;
+}
+
+@media (min-width: 560px) {
+  .portfolio .grid {
+        grid-template-columns: 240px 240px;
+    }
+  }
+
+  @media (min-width: 880px) {
+    .portfolio .grid {
+          grid-template-columns: repeat (3, 240px);
+          align-content: center;
+          justify-content: center;
+          height: calc(100vh -  48px - 8em); 
+      }
+    }
+  
+.portfolio figure {
+  text-align: center;
+}
+
   .img-portfolio {
-    height:180px;
-    width: 180px;
+    height:400px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  @media (min-width: 1200px; ) {
+    .img-portfolio {
+      height:10em;
+      width: 100%;
+    }
   }
